@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Harmony Outdoors</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background: linear-gradient(to right, #87CEEB, #20B2AA); /* Nature-inspired gradient colors */
+    }
+    header {
+        background: #fff;
+        padding: 10px 0;
+        text-align: center;
+    }
+    nav {
+        display: flex;
+        justify-content: center;
+    }
+    nav a {
+        margin: 0 10px;
+        text-decoration: none;
+        color: #333;
+    }
+    .container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 0 20px;
+        color: #333;
+    }
+    footer {
+        background: #333;
+        color: #fff;
+        text-align: center;
+        padding: 10px 0;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+    form {
+        margin: 20px 0;
+    }
+    label {
+        display: block;
+        margin-top: 10px;
+    }
+    input, textarea {
+        width: 100%;
+        padding: 5px;
+        margin-top: 5px;
+    }
+    button {
+        padding: 5px 10px;
+        background: #333;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Products</a>
+            <a href="#">About Us</a>
+        </nav>
+    </header>
+    <div class="container">
+        <h1>Welcome to Harmony Outdoors</h1>
+        <p>Explore our range of camping gear below:</p>
+        <div class="product">
+            <img src="product1.jpg" alt="Product 1">
+            <h3>Product 1</h3>
+            <p>Weight: 2 lbs</p>
+            <p>Capacity: 4 people</p>
+            <p>Material: Nylon</p>
+        </div>
+        <div class="product">
+            <img src="product2.jpg" alt="Product 2">
+            <h3>Product 2</h3>
+            <p>Weight: 1.5 lbs</p>
+            <p>Capacity: 2 people</p>
+            <p>Material: Polyester</p>
+        </div>
+    </div>
+    <footer>
+        &copy; 2022 Harmony Outdoors. All Rights Reserved.
+        <div class="social-icons">
+            <a href="#"><img src="facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="twitter.png" alt="Twitter"></a>
+            <a href="#"><img src="instagram.png" alt="Instagram"></a>
+        </div>
+    </footer>
+    <div id="about-us" style="display: none;">
+        <form id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" rows="4" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+        <div id="thank-you" style="display: none;">Thank you for contacting Harmony Outdoors!</div>
+    </div>
+    <script>
+        document.querySelector('a[href="#About Us"]').addEventListener('click', function() {
+            document.getElementById('about-us').style.display = 'block';
+        });
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            document.getElementById('contact-form').style.display = 'none';
+            document.getElementById('thank-you').style.display = 'block';
+        });
+    </script>
+</body>
+</html>
